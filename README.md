@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 Task Roulette
 
-## Getting Started
+A React application that randomly selects home improvement tasks to tackle each month. Perfect for procrastinators who need fate to decide which household problem to solve next!
+## Demo
 
-First, run the development server:
+<div align="center">
+  <video src="./public/taskRoulette.mp4" controls width="600">
+    Seu navegador não suporta o elemento de vídeo.
+  </video>
+</div>
 
+##  Features
+
+- **Random Task Selection**: Spin the roulette to randomly choose your monthly challenge
+- **Monthly Challenges**: Track your current task with start/due dates and countdown timer
+- **Task Management**: Add, categorize (Easy/Medium/Hard), and delete tasks
+- **Progress Tracking**: Mark tasks as complete and view your accomplishment history
+- **Local Storage**: All data persists in your browser
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+
+##  Built With
+
+- **React 18** with TypeScript
+- **Next.js 14** (App Router)
+- **Tailwind CSS** for styling
+- **shadcn/ui** components
+- **Lucide React** icons
+- **Local Storage** for data persistence
+
+##  How It Works
+
+1. **Add Tasks**: Input your home improvement tasks and categorize them by difficulty
+2. **Spin the Roulette**: Let the app randomly select your monthly challenge
+3. **Track Progress**: Monitor your current task with a built-in countdown timer
+4. **Complete Tasks**: Mark tasks as done and build your completion history
+5. **Stay Motivated**: View your overall progress and completed task statistics
+
+##  Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/ceferrei/task-roulette-react.git
+cd task-roulette
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Key Components
 
-## Learn More
+- **Task Interface**: TypeScript interface defining task structure
+- **Monthly Challenge System**: Tracks current task with dates and countdown
+- **Roulette Animation**: Spinning animation for task selection
+- **Category System**: Easy/Medium/Hard task classification
+- **Statistics Dashboard**: Progress tracking and completion metrics
 
-To learn more about Next.js, take a look at the following resources:
+##  Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Adding New Categories
+Modify the `CATEGORIES` object in `app/page.tsx`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```typescript
+const CATEGORIES = {
+  easy: { label: "Easy", color: "bg-green-100 text-green-800", icon: "🟢" },
+  medium: { label: "Medium", color: "bg-yellow-100 text-yellow-800", icon: "🟡" },
+  hard: { label: "Hard", color: "bg-red-100 text-red-800", icon: "🔴" },
+  // Add your custom category here
+}
+```
 
-## Deploy on Vercel
+### Styling
+The app uses Tailwind CSS. Modify classes in the JSX or extend the theme in `tailwind.config.js`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+##  Data Storage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All data is stored in the browser's localStorage:
+- `taskRoulette`: Array of all tasks
+- `monthlyChallenge`: Current monthly challenge details
+
+
+##  License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+**Happy Task Tackling!** 🏠✨
