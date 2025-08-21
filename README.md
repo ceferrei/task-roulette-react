@@ -4,7 +4,7 @@ A React application that randomly selects home improvement tasks to tackle each 
 ## Demo
 
 <div align="center">
-  <video src="[./public/taskRoulette.mp4](https://github.com/user-attachments/assets/da46daa3-6b1a-4f01-b8c2-b4625aaa94e5)" controls width="600">
+  <video src="(https://github.com/user-attachments/assets/da46daa3-6b1a-4f01-b8c2-b4625aaa94e5)" controls width="600">
     Seu navegador não suporta o elemento de vídeo.
   </video>
 </div>
